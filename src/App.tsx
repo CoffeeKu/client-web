@@ -11,21 +11,24 @@ function App() {
   return (
     <>
       <div className='flex'>
-        <section className='w-3/4 h-screen'>
-          <NavbarTop />
-          <div className='bg-green-500 h-screen overflow-y-scroll'>
+        <section className='w-3/4 h-screen bg-slate-100'>
+          {/* <div className='fixed top-0 w-3/4 z-10 bg-slate-100'> */}
+          <div className='h-1/5'>
+            <NavbarTop />
             <CategoryFilter />
-            <div className='flex flex-wrap'>
-              <CardMenu />
-              <CardMenu />
-              <CardMenu />
-              <CardMenu />
-              <CardMenu />
-              <CardMenu />
-            </div>
           </div>
+
+          <div className='flex flex-wrap h-4/5 relative z-0 overflow-y-scroll'>
+            <CardMenu />
+            <CardMenu />
+            <CardMenu />
+            <CardMenu />
+            <CardMenu />
+            <CardMenu />
+          </div>
+
         </section>
-        <aside className='w-1/4 bg-red-500 h-screen overflow-y-scroll'>
+        <aside className='w-1/4 h-screen overflow-y-scroll'>
           <h1>Current Order</h1>
           <div className="card card-side bg-base-100 shadow-xl">
             <figure className='h-24'>
